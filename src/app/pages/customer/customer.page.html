@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+    <!-- <ion-buttons slot=start>
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="registrationform" (ngSubmit) = "regSubmit()">
+    <ion-item>
+      <ion-label position="floating" color="primary">Name</ion-label>
+      <ion-input type="text" formControlName = "name" required></ion-input>
+    </ion-item>
+    <div *ngFor="let error of validationMessages.name">
+      <ng-container *ngIf="name.hasError(error.type) && (name.dirty || name.touched)">
+        <small class="error-message">{{error.message}}</small>
+      </ng-container>
+    </div>
+    
+    <ion-item> 
+      <ion-label position="floating" color="primary">Address</ion-label>
+      <ion-input type="text" formControlName = "address" required></ion-input>
+    </ion-item>
+    <div *ngFor="let error of validationMessages.address">
+      <ng-container *ngIf="address.hasError(error.type) && (address.dirty || address.touched)">
+        <small class="error-message">{{error.message}}</small>
+      </ng-container>
+    </div>
+
+    <ion-item > 
+      <ion-label position="floating" color="primary">Card No</ion-label>
+      <ion-input type="text" formControlName = "cardno" required></ion-input>
+    </ion-item>
+    <div *ngFor="let error of validationMessages.cardno">
+      <ng-container *ngIf="cardno.hasError(error.type) && (cardno.dirty || cardno.touched)">
+        <small class="error-message">{{error.message}}</small>
+      </ng-container>
+    </div>
+
+    <ion-item > 
+      <ion-label position="floating" color="primary">Phone No</ion-label>
+      <ion-input type="tel" formControlName = "phoneno" required></ion-input>
+    </ion-item>
+    <div *ngFor="let error of validationMessages.phoneno">
+      <ng-container *ngIf="phoneno.hasError(error.type) && (phoneno.dirty || phoneno.touched)">
+        <small class="error-message">{{error.message}}</small>
+      </ng-container>
+    </div>
+
+    <!-- <ion-item > 
+      <ion-label position="floating" color="primary">Tea Factory</ion-label>
+      <ion-input type="text" formControlName = "phoneno"></ion-input>
+    </ion-item> -->   
+
+    <ion-button class="submit-btn" type="submit" [disabled] = "!registrationform.valid">Register</ion-button>
+
+    <!-- <label class="error-message">
+      {{errorMessage}}
+    </label> -->
+  </form>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "ionic-5-build-windows",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

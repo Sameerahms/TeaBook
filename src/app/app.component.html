@@ -1,0 +1,62 @@
+<nb-layout>
+
+  <nb-layout-header fixed>
+  <!-- Insert header here -->
+  </nb-layout-header>
+
+  <nb-layout-column>
+
+    <!-- splash screen -->
+    <!-- <div *ngIf="showSplash" class="splash" >
+      <div class="spinner"></div>
+    </div> -->
+    
+    <ion-app>
+      
+    <!-- Menu items -->
+    <ion-menu menuId ="main-menu" contentId="main">
+      <ion-content>
+        <div class="menu-header-bg"></div>
+        <div class="header-content">
+          <img src="../assets/images/avatar.png" alt="">
+          <ion-label>
+            <h2>Mr. Lahiru</h2>
+            <p>Transpoter</p>
+          </ion-label>
+        </div>
+        <ion-list lines="none" class="menu-items">
+          <ion-menu-toggle>
+          <ion-item routerLink="home"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <ion-icon name="home"></ion-icon>Home
+          </ion-item>
+          <ion-item routerLink="notification" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <ion-icon name="flash"></ion-icon>Notification
+          </ion-item>
+          <ion-item routerLink="customer" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <ion-icon name="add"></ion-icon>Add Customers
+          </ion-item>
+          <ion-item>
+            <ion-icon name="share" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"></ion-icon>Share
+          </ion-item>
+          <ion-item>
+            <ion-icon name="exit-outline" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"></ion-icon>Sign out
+          </ion-item>
+        
+        </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    
+      <ion-router-outlet id="main" main></ion-router-outlet>
+    </ion-app>
+    
+    <!-- 
+    Searchbar with cancel button never shown
+    <ion-searchbar showCancelButton="never"></ion-searchbar> -->
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+  <!-- Insert footer here -->
+  </nb-layout-footer>
+
+</nb-layout>

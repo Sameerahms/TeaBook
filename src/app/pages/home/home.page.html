@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Search</ion-title>
+    <ion-buttons slot=start> 
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar class="searchbar" [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
+  
+  <ion-list class="list"> 
+
+    <ion-item button  *ngFor="let item of (results | async)" [routerLink]="['/', 'home', item.id]" routerDirection="forward">
+      <!-- <ion-avatar slot="start">
+        <img [src]="item.Poster" *ngIf="item.Poster != 'N/A'">
+      </ion-avatar> -->
+      
+      <ion-label text-wrap >
+        <ion-row>
+         <ion-col>
+           <div class="col">
+          <h2>{{ item.name}}</h2>
+          <P>0{{ item.phoneNo }}</P>
+        </div>
+      </ion-col> 
+        
+      <ion-col>
+        <div class="col">
+       <p>{{ item.address}}</p>
+       <P>{{ item.cadrNo }}</P>
+     </div>
+   </ion-col> 
+      </ion-row>
+      </ion-label>
+ 
+    </ion-item>
+ 
+  </ion-list>
+</ion-content>

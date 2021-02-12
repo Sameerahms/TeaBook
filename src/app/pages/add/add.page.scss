@@ -1,0 +1,88 @@
+.menu-header-bg{
+    height: 160px;
+    width: auto;
+    padding-top: 110px;
+    background-color: #5deeee;
+    background: linear-gradient(90deg, #4ce7e7, #0a75da 100%);
+    box-shadow: 0px 1px 10px rgba(37, 116, 235, 0.5);  
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    h3{
+        align-items: right;
+        margin-top: -90px;
+        margin-left: 80%;
+        font-size: 15px;
+        font-weight: 300;
+        color: #ffffff;
+      }
+  }
+  
+  .header-content{
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+  
+    img{
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 7px solid #1b047e;
+      margin-right: 14px;
+    }
+  
+    h2{
+      font-size: 30px;
+      font-weight: 300;
+      color: #ffffff;
+    }
+  
+    p{
+      margin-top: 5px;
+      font-size: 16px;
+      color: #e4e4e4;
+      font-weight: 100;
+      letter-spacing: 0.4px;
+  
+    }
+  }
+
+  .ion-padding{   
+    ion-button{
+      margin-left: 10%;
+    }
+    ion-icon{
+      margin-right: 4px;
+    }
+  }
+
+.lable-row{
+
+  p{
+    margin-left: 15%;
+    margin-top: 50px;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 80;
+    letter-spacing: 0.4px
+  }
+}
+
+.input{
+  margin-top: 20px;
+  ion-datetime{
+    margin-left: 20px;
+    font-size: 22px;
+  }
+  ion-input{
+    margin-left: 50px;
+    font-size: 22px;
+    border: solid 2px #8799;
+    width: 70px;
+  }
+}
